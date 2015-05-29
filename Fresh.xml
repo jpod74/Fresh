@@ -12,7 +12,7 @@
           <block type="oled_setcursor" id="161" inline="true">
             <value name="STARTX">
               <block type="math_number" id="175">
-                <field name="NUM">10</field>
+                <field name="NUM">30</field>
               </block>
             </value>
             <value name="STARTY">
@@ -36,7 +36,7 @@
                     </value>
                     <value name="STARTY">
                       <block type="math_number" id="239">
-                        <field name="NUM">10</field>
+                        <field name="NUM">30</field>
                       </block>
                     </value>
                     <next>
@@ -51,7 +51,7 @@
                             <mutation elseif="1" else="1"></mutation>
                             <value name="IF0">
                               <block type="logic_compare" id="272" inline="true">
-                                <field name="OP">EQ</field>
+                                <field name="OP">LT</field>
                                 <value name="A">
                                   <block type="sensor_object" id="274">
                                     <field name="OBJECT">LEFTFRONT</field>
@@ -69,7 +69,7 @@
                             </statement>
                             <value name="IF1">
                               <block type="logic_compare" id="273" inline="true">
-                                <field name="OP">EQ</field>
+                                <field name="OP">GT</field>
                                 <value name="A">
                                   <block type="sensor_object" id="275">
                                     <field name="OBJECT">LEFTSIDE</field>
