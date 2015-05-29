@@ -54,7 +54,7 @@
                                 <field name="OP">LT</field>
                                 <value name="A">
                                   <block type="sensor_object" id="16">
-                                    <field name="OBJECT">LEFTFRONT</field>
+                                    <field name="OBJECT">LEFTSIDE</field>
                                   </block>
                                 </value>
                                 <value name="B">
@@ -109,5 +109,8 @@
         </next>
       </block>
     </statement>
+    <next>
+      <block type="movement_stop" id="35"></block>
+    </next>
   </block>
 </xml>
