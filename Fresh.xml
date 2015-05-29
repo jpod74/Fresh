@@ -46,6 +46,59 @@
                             <field name="OBJECT">LEFTSIDE</field>
                           </block>
                         </value>
+                        <next>
+                          <block type="controls_if" id="248" inline="false">
+                            <mutation elseif="1" else="1"></mutation>
+                            <value name="IF0">
+                              <block type="logic_compare" id="272" inline="true">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="sensor_object" id="274">
+                                    <field name="OBJECT">LEFTFRONT</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="277">
+                                    <field name="NUM">60</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="movement_right" id="388"></block>
+                            </statement>
+                            <value name="IF1">
+                              <block type="logic_compare" id="273" inline="true">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="sensor_object" id="275">
+                                    <field name="OBJECT">LEFTSIDE</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="276">
+                                    <field name="NUM">90</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO1">
+                              <block type="movement_left" id="378"></block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block type="movement_forward" id="368"></block>
+                            </statement>
+                            <next>
+                              <block type="robot_delay" id="347" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="348">
+                                    <field name="NUM">100</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
